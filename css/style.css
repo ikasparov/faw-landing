@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=cyrillic");
+body {
+  font-family: 'Roboto', sans-serif;
+  transition: all .3s ease;
+  margin: 0; }
+
+.container {
+  width: 100%; }
+
+.top {
+  height: 90px;
+  margin: 0 auto;
+  width: 80%;
+  position: relative; }
+  .top img {
+    position: relative;
+    width: 170px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+  .top span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; }
+  .top span a {
+    color: #000000;
+    text-decoration: none; }
+  .top span.call {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: right;
+    position: absolute;
+    left: -255px; }
+  .top a span {
+    width: 220px; }
+
+.middle {
+  display: flex;
+  position: relative;
+  overflow: hidden; }
+  .middle a {
+    display: block;
+    text-decoration: none;
+    color: #0290c8;
+    font-size: 40px;
+    overflow: hidden;
+    position: relative; }
+  .middle a span {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -100%);
+    transition: all .3s;
+    z-index: 9;
+    text-align: center;
+    line-height: 1;
+    font-weight: 400;
+    color: #FFFFFF; }
+  .middle a .effect {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .middle a span:after {
+    content: '';
+    width: 500%;
+    height: 300px;
+    background-color: white;
+    opacity: .2;
+    display: block;
+    left: 720%;
+    transform: translate(-100%, -100%) rotate(30deg);
+    position: absolute;
+    transition: all .6s linear; }
+  .middle a span:before {
+    content: '';
+    width: 500%;
+    height: 300px;
+    background-color: white;
+    opacity: .1;
+    display: block;
+    left: 720%;
+    transform: translate(-100%, -100%) rotate(30deg);
+    position: absolute;
+    transition: all .5s linear;
+    z-index: 4; }
+  .middle a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.1, 1.1);
+    transition: all .3s; }
+  .middle .cars,
+  .middle .trucks {
+    height: 460px;
+    width: 100%; }
+  .middle .trucks:after, .middle .cars:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #3498db;
+    opacity: 0;
+    transition: all .1s ease; }
+  .middle .trucks:before {
+    background-image: url(../images/truck2.jpg);
+    background-position-y: 35%; }
+  .middle .cars:before {
+    background-image: url(../images/cars.jpg); }
+  .middle .trucks:hover:before,
+  .middle .cars:hover:before {
+    transform: scale(1, 1); }
+  .middle .trucks:hover:after,
+  .middle .cars:hover:after {
+    opacity: .3; }
+  .middle .trucks:hover > span,
+  .middle .cars:hover > span {
+    opacity: 1;
+    color: #FFFFFF; }
+  .middle .trucks:hover > span:after,
+  .middle .cars:hover > span:after {
+    left: -300%;
+    opacity: .8; }
+  .middle .trucks:hover > span:before,
+  .middle .cars:hover > span:before {
+    left: -300%;
+    opacity: .8; }
+
+.content {
+  padding: 80px 0 10px;
+  width: 90%;
+  position: relative;
+  margin-left: 100px; }
+  .content * {
+    color: #3e3e3e; }
+  .content h2 {
+    font-size: 24px;
+    padding: 0 0 40px 0;
+    max-width: 550px; }
+  .content .stuff {
+    padding-bottom: 140px; }
+  .content p.par {
+    line-height: 1.67;
+    width: 550px;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .content iframe {
+    position: absolute;
+    right: 100px; }
+  .content .space {
+    width: 10%; }
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 0; }
+  .copyright .faw {
+    position: absolute;
+    font-size: 16px;
+    top: 60%;
+    left: 100px;
+    transform: translate(0, -50%); }
+  .copyright .dealp {
+    position: absolute;
+    right: 100px;
+    font-size: 18px;
+    top: 45%;
+    transform: translate(0, -50%); }
+
+@media screen and (max-width: 1160px) {
+  p.par {
+    width: 350px !important; }
+  .middle {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    overflow: hidden; } }
